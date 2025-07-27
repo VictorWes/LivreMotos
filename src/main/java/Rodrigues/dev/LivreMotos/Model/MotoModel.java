@@ -16,8 +16,7 @@ public class MotoModel {
     private String cor;
     private Double valor;
 
-    public MotoModel(Long id, String nome, int ano, String modelo, String fichaTecnica, String cor, Double valor) {
-        Id = id;
+    public MotoModel(String nome, int ano, String modelo, String fichaTecnica, String cor, Double valor) {
         this.nome = nome;
         this.ano = ano;
         this.modelo = modelo;

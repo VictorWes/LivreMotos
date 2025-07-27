@@ -21,8 +21,7 @@ public class ClienteModel {
     private List<MotoModel> motos;
 
 
-    public ClienteModel(Long id, String nome, int cpf, int idade, String email, List<MotoModel> motos) {
-        this.id = id;
+    public ClienteModel(String nome, int cpf, int idade, String email, List<MotoModel> motos) {
         this.nome = nome;
         this.cpf = cpf;
         this.idade = idade;
