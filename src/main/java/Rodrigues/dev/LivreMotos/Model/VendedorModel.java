@@ -14,6 +14,8 @@ public class VendedorModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long Id;
     private String nome;
+
+    @Column(unique = true)
     private String email;
 
 
