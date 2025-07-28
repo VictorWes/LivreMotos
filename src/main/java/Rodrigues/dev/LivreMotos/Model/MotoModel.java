@@ -15,6 +15,7 @@ public class MotoModel {
     private String fichaTecnica;
     private String cor;
     private Double valor;
+    private String imgUrl;
 
     public MotoModel(String nome, int ano, String modelo, String fichaTecnica, String cor, Double valor) {
         this.nome = nome;
