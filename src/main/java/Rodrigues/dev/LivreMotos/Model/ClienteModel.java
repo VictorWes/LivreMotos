@@ -20,6 +20,8 @@ public class ClienteModel {
     @JsonIgnore
     private List<MotoModel> motos;
 
+    public ClienteModel() {
+    }
 
     public ClienteModel(String nome, int cpf, int idade, String email, List<MotoModel> motos) {
         this.nome = nome;
