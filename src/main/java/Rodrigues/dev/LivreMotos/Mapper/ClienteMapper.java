@@ -2,7 +2,9 @@ package Rodrigues.dev.LivreMotos.Mapper;
 
 import Rodrigues.dev.LivreMotos.DTO.ClienteDTO;
 import Rodrigues.dev.LivreMotos.Model.ClienteModel;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ClienteMapper {
 
 

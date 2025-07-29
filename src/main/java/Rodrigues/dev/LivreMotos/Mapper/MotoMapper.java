@@ -2,7 +2,9 @@ package Rodrigues.dev.LivreMotos.Mapper;
 
 import Rodrigues.dev.LivreMotos.DTO.MotoDTO;
 import Rodrigues.dev.LivreMotos.Model.MotoModel;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MotoMapper {
 
     public MotoModel map(MotoDTO motoDTO){
