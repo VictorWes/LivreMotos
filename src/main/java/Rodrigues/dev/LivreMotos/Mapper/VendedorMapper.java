@@ -5,7 +5,7 @@ import Rodrigues.dev.LivreMotos.Model.VendedorModel;
 import org.springframework.stereotype.Component;
 
 @Component
-public class VendendorMapper {
+public class VendedorMapper {
 
     public VendedorModel map(VendedorDTO vendedorDTO) {
         VendedorModel vendedorModel = new VendedorModel();
