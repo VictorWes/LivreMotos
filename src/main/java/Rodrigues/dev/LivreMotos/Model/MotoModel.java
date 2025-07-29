@@ -17,6 +17,10 @@ public class MotoModel {
     private Double valor;
     private String imgUrl;
 
+    @ManyToOne(optional = true) // <- aqui é o segredo!
+    @JoinColumn(name = "cliente_id", nullable = true)
+    private ClienteModel cliente;
+
     public MotoModel(String nome, int ano, String modelo, String fichaTecnica, String cor, Double valor) {
         this.nome = nome;
         this.ano = ano;
