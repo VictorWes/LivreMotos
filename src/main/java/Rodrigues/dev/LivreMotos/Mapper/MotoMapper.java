@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MotoMapper {
 
-    public MotoModel map(MotoDTO motoDTO){
+    public MotoModel toModel(MotoDTO motoDTO){
         MotoModel motoModel = new MotoModel();
         motoModel.setAno(motoDTO.getAno());
         motoModel.setCor(motoDTO.getCor());
@@ -21,7 +21,7 @@ public class MotoMapper {
         return motoModel;
     }
 
-    public MotoDTO map(MotoModel motoModel){
+    public MotoDTO toDTO(MotoModel motoModel){
         MotoDTO motoDTO = new MotoDTO();
         motoDTO.setAno(motoModel.getAno());
         motoDTO.setCliente(motoModel.getCliente());
