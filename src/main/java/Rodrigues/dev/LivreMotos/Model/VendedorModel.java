@@ -23,6 +23,8 @@ public class VendedorModel {
     @JsonIgnore
     private List<OrdemVendaModel> ordensVenda = new ArrayList<>();
 
+    public VendedorModel() {
+    }
 
     public VendedorModel(String nome, String email, List<OrdemVendaModel> ordensVenda) {
         this.nome = nome;

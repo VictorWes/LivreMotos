@@ -36,6 +36,9 @@ public class OrdemVendaModel {
     @Enumerated(EnumType.STRING)
     private MeioDePagamento formaDePagamento;
 
+    public OrdemVendaModel() {
+    }
+
     public OrdemVendaModel(ClienteModel cliente, MotoModel motoVendida, VendedorModel vendedor, LocalDate dataVenda, Double valorTotal, StatusOrdemVenda status, MeioDePagamento formaDePagamento) {
         this.cliente = cliente;
         this.motoVendida = motoVendida;
