@@ -1,30 +1,34 @@
-package Rodrigues.dev.LivreMotos.Model;
+package Rodrigues.dev.LivreMotos.DTO;
 
+import Rodrigues.dev.LivreMotos.Model.ClienteModel;
 import jakarta.persistence.*;
 
-@Entity
-@Table(name="tb_motos")
-public class MotoModel {
+public class MotoDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long Id;
+
     private String nome;
+
     private int ano;
+
     private String modelo;
+
     private String fichaTecnica;
+
     private String cor;
+
     private Double valor;
+
     private String imgUrl;
 
-    @ManyToOne(optional = true)
-    @JoinColumn(name = "cliente_id", nullable = true)
     private ClienteModel cliente;
 
-    public MotoModel() {
+
+    public MotoDTO() {
     }
 
-    public MotoModel(String nome, int ano, String modelo, String fichaTecnica, String cor, Double valor, String imgUrl, ClienteModel cliente) {
+    public MotoDTO(String nome, int ano, String modelo, String fichaTecnica, String cor, Double valor, String imgUrl, ClienteModel cliente) {
         this.nome = nome;
         this.ano = ano;
         this.modelo = modelo;

@@ -1,45 +1,34 @@
-package Rodrigues.dev.LivreMotos.Model;
+package Rodrigues.dev.LivreMotos.DTO;
 
 import Rodrigues.dev.LivreMotos.Enums.MeioDePagamento;
 import Rodrigues.dev.LivreMotos.Enums.StatusOrdemVenda;
-import jakarta.persistence.*;
+import Rodrigues.dev.LivreMotos.Model.ClienteModel;
+import Rodrigues.dev.LivreMotos.Model.MotoModel;
+import Rodrigues.dev.LivreMotos.Model.VendedorModel;
 
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "tb_ordem_vendas")
-public class OrdemVendaModel {
+public class OrdemVendaDTO {
 
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "cliente_id")
     private ClienteModel cliente;
 
-    @ManyToOne
-    @JoinColumn(name = "moto_id")
     private MotoModel motoVendida;
 
-    @ManyToOne
-    @JoinColumn(name = "vendedor_id")
     private VendedorModel vendedor;
 
     private LocalDate dataVenda;
     private Double valorTotal;
 
-    @Enumerated(EnumType.STRING)
     private StatusOrdemVenda status;
 
-    @Enumerated(EnumType.STRING)
     private MeioDePagamento formaDePagamento;
 
-    public OrdemVendaModel() {
+    public OrdemVendaDTO() {
     }
 
-    public OrdemVendaModel(ClienteModel cliente, MotoModel motoVendida, VendedorModel vendedor, LocalDate dataVenda, Double valorTotal, StatusOrdemVenda status, MeioDePagamento formaDePagamento) {
+    public OrdemVendaDTO(ClienteModel cliente, MotoModel motoVendida, VendedorModel vendedor, LocalDate dataVenda, Double valorTotal, StatusOrdemVenda status, MeioDePagamento formaDePagamento) {
         this.cliente = cliente;
         this.motoVendida = motoVendida;
         this.vendedor = vendedor;

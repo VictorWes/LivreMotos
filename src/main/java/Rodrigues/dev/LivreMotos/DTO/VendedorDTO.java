@@ -1,32 +1,25 @@
-package Rodrigues.dev.LivreMotos.Model;
+package Rodrigues.dev.LivreMotos.DTO;
 
+import Rodrigues.dev.LivreMotos.Model.OrdemVendaModel;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "tb_vendedor")
-public class VendedorModel {
+public class VendedorDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long Id;
     private String nome;
 
-    @Column(unique = true)
     private String email;
 
-
-    @OneToMany(mappedBy = "vendedor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonIgnore
     private List<OrdemVendaModel> ordensVenda = new ArrayList<>();
 
-    public VendedorModel() {
+    public VendedorDTO() {
     }
 
-    public VendedorModel(String nome, String email, List<OrdemVendaModel> ordensVenda) {
+    public VendedorDTO(String nome, String email, List<OrdemVendaModel> ordensVenda) {
         this.nome = nome;
         this.email = email;
         this.ordensVenda = ordensVenda;
