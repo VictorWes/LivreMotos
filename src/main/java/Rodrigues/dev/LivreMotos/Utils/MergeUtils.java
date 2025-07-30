@@ -1,4 +1,4 @@
-package Rodrigues.dev.LivreMotos.utils;
+package Rodrigues.dev.LivreMotos.Utils;
 
 import java.lang.reflect.Field;
 

@@ -10,7 +10,7 @@ public class ClienteMapper {
 
     public ClienteModel toModel(ClienteDTO clienteDTO){
         ClienteModel clienteModel = new ClienteModel();
-        clienteModel.setCpf(clienteModel.getCpf());
+        clienteModel.setCpf(clienteDTO.getCpf());
         clienteModel.setEmail(clienteDTO.getEmail());
         clienteModel.setId(clienteDTO.getId());
         clienteModel.setIdade(clienteDTO.getIdade());
