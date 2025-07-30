@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrdemVendaMapper {
 
-    public OrdemVendaModel map(OrdemVendaDTO ordemVendaDTO) {
+    public OrdemVendaModel toModel(OrdemVendaDTO ordemVendaDTO) {
         OrdemVendaModel ordemVendaModel = new OrdemVendaModel();
         ordemVendaModel.setId(ordemVendaDTO.getId());
         ordemVendaModel.setCliente(ordemVendaDTO.getCliente());
@@ -20,7 +20,7 @@ public class OrdemVendaMapper {
         return ordemVendaModel;
     }
 
-    public OrdemVendaDTO map(OrdemVendaModel ordemVendaModel) {
+    public OrdemVendaDTO toDTO(OrdemVendaModel ordemVendaModel) {
         OrdemVendaDTO ordemVendaDTO = new OrdemVendaDTO();
         ordemVendaDTO.setId(ordemVendaModel.getId());
         ordemVendaDTO.setCliente(ordemVendaModel.getCliente());

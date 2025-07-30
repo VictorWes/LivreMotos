@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 public class ClienteMapper {
 
 
-    public ClienteModel map(ClienteDTO clienteDTO){
+    public ClienteModel toModel(ClienteDTO clienteDTO){
         ClienteModel clienteModel = new ClienteModel();
-        clienteModel.setCpf(clienteModel.getCpf());
+        clienteModel.setCpf(clienteDTO.getCpf());
         clienteModel.setEmail(clienteDTO.getEmail());
         clienteModel.setId(clienteDTO.getId());
         clienteModel.setIdade(clienteDTO.getIdade());
@@ -19,7 +19,7 @@ public class ClienteMapper {
         return clienteModel;
     }
 
-    public ClienteDTO map(ClienteModel clienteModel){
+    public ClienteDTO toDTO(ClienteModel clienteModel){
         ClienteDTO clienteDTO = new ClienteDTO();
         clienteDTO.setCpf(clienteModel.getCpf());
         clienteDTO.setEmail(clienteModel.getEmail());
