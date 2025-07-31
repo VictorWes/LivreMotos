@@ -41,7 +41,7 @@ public class ClienteController {
         }
    }
 
-   @PatchMapping("/{id}")
+   @PatchMapping("/alterar/{id}")
     public ResponseEntity<?> atualizarDadosParcial(@PathVariable Long id, @RequestBody ClienteDTO clienteDTO){
         ClienteDTO cliente = clienteService.atualizarDadosParcial(id, clienteDTO);
         if (cliente != null){
@@ -58,7 +58,7 @@ public class ClienteController {
             clienteService.deletarCliente(id);
             return ResponseEntity.ok(clienteDeletar);
         }else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Ninja ID não localizado");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID não localizado");
         }
    }
 
