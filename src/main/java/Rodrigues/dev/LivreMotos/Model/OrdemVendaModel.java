@@ -2,6 +2,7 @@ package Rodrigues.dev.LivreMotos.Model;
 
 import Rodrigues.dev.LivreMotos.Enums.MeioDePagamento;
 import Rodrigues.dev.LivreMotos.Enums.StatusOrdemVenda;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -27,6 +28,8 @@ public class OrdemVendaModel {
     @JoinColumn(name = "vendedor_id")
     private VendedorModel vendedor;
 
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dataVenda;
     private Double valorTotal;
 

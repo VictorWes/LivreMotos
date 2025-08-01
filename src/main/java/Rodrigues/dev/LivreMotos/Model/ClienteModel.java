@@ -14,7 +14,7 @@ public class ClienteModel {
     private Long id;
     private String nome;
     @Column(unique = true)
-    private int cpf;
+    private String cpf;
     private int idade;
 
     @Column(unique = true)
@@ -27,13 +27,14 @@ public class ClienteModel {
     public ClienteModel() {
     }
 
-    public ClienteModel(String nome, int cpf, int idade, String email, List<MotoModel> motos) {
+    public ClienteModel(String nome, String cpf, int idade, String email, List<MotoModel> motos) {
         this.nome = nome;
         this.cpf = cpf;
         this.idade = idade;
         this.email = email;
         this.motos = motos;
     }
+
 
     public Long getId() {
         return id;
@@ -51,11 +52,11 @@ public class ClienteModel {
         this.nome = nome;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
