@@ -31,6 +31,7 @@ public class OrdemVendaModel {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dataVenda;
+
     private Double valorTotal;
 
     @Enumerated(EnumType.STRING)

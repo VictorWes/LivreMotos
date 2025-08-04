@@ -9,12 +9,19 @@ public class MotoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
+
     private String nome;
+
     private int ano;
+
     private String modelo;
+
     private String fichaTecnica;
+
     private String cor;
+
     private Double valor;
+
     private String imgUrl;
 
     @ManyToOne(optional = true)
